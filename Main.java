@@ -100,7 +100,7 @@ class Main
         
         for ( int i=0; i<ar3.length; i++)
         {
-            System.out.println("ar3[" +i+"] =" +ar1[i]);
+            System.out.println("ar3[" +i+"] =" +ar3[i]);
         }
         /*
          * Task 5.  Switch the first and last element of ar1.
@@ -167,7 +167,7 @@ class Main
             {
                 System.out.println(ar1[i]*10);
             }
-            else if (ar1[i]%2==0)
+            else //if (ar1[i]%2==0)
             {
                 System.out.println(ar1[i]);
             }
@@ -242,7 +242,7 @@ class Main
             System.out.println(ar4[i]);
         }
         
-        for (int i=ar4.length; i>0; i--)
+        for (int i=ar4.length-1; i>0; i--)
         {
             value = ar4[i];
             ar4[i] = ar4[i-1];
@@ -258,6 +258,26 @@ class Main
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
+        System.out.println("** Task 11 **");
+        
+        
+            
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+            
+        int ar2half = ar2.length/2;
+        System.out.println(ar2half);
+        int task11Temp;
+        for (int i=0 ; i<ar2half ; i++)
+        {
+            task11Temp = ar2[i];
+            System.out.println(" "+i+":"+(ar2.length-i));
+            ar2[i] = ar2[ar2.length-1-i];
+            ar2[ar2.length-1-i]=task11Temp;
+        }
+               
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
         
         
         /*
@@ -282,8 +302,25 @@ class Main
          *  ar5[2]="and"     ar6[2]=3
          *  
          *  Count how many words have more than 5 letters.
+         *  
          */
-        
+        System.out.println("Print 12");
+        String [] ar5 = {"Four", "score", "and", "seven", "years", "ago", "our", "fathers", "brought", "forth", "on",
+         "this", "continent", "a", "new", "nation"};
+         int[] ar6 = new int[ar5.length];
+         count = 0;
+         for (int i =0; i<ar5.length; i++)
+         {
+             ar6[i] = ar5[i].length();
+            }
+            for (int i=0; i<ar6.length; i++)
+            {
+                if (ar6[i]>5)
+                {
+                   count++;
+                }
+            }
+            System.out.println(count);
         /*
          * Task 13
          * Create an array called monsterArray of 5 Monsters.
