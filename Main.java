@@ -335,29 +335,21 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
-        String[] monsterArray={ "Cookie",  "Grover",  "Oscar the Grouch" , "Elmo", "Rosita"};
-        for (int i =0; i<monsterArray.length; i++)
-        {
-            System.out.println("[ "+i+"]" +monsterArray[i];
-        }
+        String[] monsterArray={ "Cookie", "Grover", "Oscar the Grouch" , "Elmo", "Rosita"};
+
+
+for (int i=0 ; i<monsterArray.length; i++)
+    System.out.println(" [ "+i+"] "+monsterArray[i]);
+
+for (int i=0 ; i<monsterArray.length; i++)
+{
+    char c= monsterArray[i].toLowerCase().charAt(0);
+    if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+        System.out.println(monsterArray[i]); 
+}
+       
         
 // Probably should not just use this.  Modify it to your own use.
-String s =monsterArray[0];
-s.charAt(0);
-
-// Convert to lower case
-s.toLowerCase().charAt(0);
-
-String c;
-// here is an example
-c=s.toLowerCase().charAt(0);
-if (c=='a' || c=='e' .......
-
-s.startsWith('a');
-s.toLowerCase().startsWith("a");
-
-if ( s.toLowerCase().startsWith("a") ||
-     s.toLowerCase().startsWith("a") ...
 
         
          /*
@@ -385,6 +377,34 @@ if ( s.toLowerCase().startsWith("a") ||
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
-        
+        int[] arx = new int[n14];
+
+ // This counts how many numbers are divisible by 3 so I can make a smaller array
+
+int count14index=0;
+
+ // put the numbers into arx[] and also count how many are divisible by 3
+ for (int i=0 ; i<n14 ; i++)
+{
+    arx[i]=start+i;
+    if (arx[i]%3==0)
+        count14index++;
+}
+// Make an array of exactly the right size.
+
+int[] arxindex = new int[count14index];
+int k14=0;
+for (int i=0 ; i<n14 ; i++)
+{
+    if (arx[i]%3==0)
+    { 
+        arxindex[k14]=i;
+        k14++;
+    }
+}
+
+//Print out the array 
+for (int i=0 ; i<count14index; i++)
+    System.out.println(arxindex[i]);
     }
 }
